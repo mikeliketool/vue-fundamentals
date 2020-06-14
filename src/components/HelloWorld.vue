@@ -3,6 +3,22 @@
     <h1 v-once>{{ title }}</h1>
     <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     <p v-html="finishedLink"></p>
+    <div id="exercise_1">
+      <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+      <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+      <!-- 2) Output your age, multiplied by 3 -->
+      <p>Age by three: {{ age * 3 }}</p>
+      <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+      <p>Random number between 0 and 1: {{ getRandomNumberBetweenZeroAndOne() }}</p>
+      <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+      <div>
+        <img style="width:100px;height:100px" v-bind:src='bronsonLink'>
+      </div>
+      <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+      <div>
+        <input type="text" v-model='name'>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,13 +29,19 @@ export default {
 		return {
       title: 'Hello World!',
       link: 'http://google.com',
-      finishedLink: '<a href="http://google.com">Google</a>'
+      finishedLink: '<a href="http://google.com">Google</a>',
+      name: 'Mike Fehrenbach',
+      age: 302,
+      bronsonLink: 'https://www.santacruzbicycles.com/files/styles/scb_crop_520_333/public/frame-thumbs/bantam-profile.jpg?itok=ItEJZ77W'
 		};
   },
   methods: {
     sayHello() {
       this.title='Hello!'
       return this.title;
+    },
+    getRandomNumberBetweenZeroAndOne() {
+      return Math.random()
     }
   }
 }
