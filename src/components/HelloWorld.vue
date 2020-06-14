@@ -2,6 +2,7 @@
   <div class="hello">
     <h1 v-once>{{ title }}</h1>
     <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    <p v-html="finishedLink"></p>
   </div>
 </template>
 
@@ -11,7 +12,8 @@ export default {
   data() {
 		return {
       title: 'Hello World!',
-      link: 'http://google.com'
+      link: 'http://google.com',
+      finishedLink: '<a href="http://google.com">Google</a>'
 		};
   },
   methods: {
