@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <OneWayBinding />
+    <Exercise1 />
+    <Events />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import OneWayBinding from './components/OneWayBinding.vue'
+import Exercise1 from './components/Exercise1.vue'
+import Events from './components/Events.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    OneWayBinding,
+    Exercise1,
+    Events
   }
 }
 </script>
