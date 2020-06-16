@@ -4,6 +4,7 @@
     <OneWayBindingExercise />
     <Events />
     <EventsExercise />
+    <TwoWayBinding />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import OneWayBinding from './components/OneWayBinding.vue'
 import OneWayBindingExercise from './components/OneWayBindingExercise.vue'
 import Events from './components/Events.vue'
 import EventsExercise from './components/EventsExercise.vue'
+import TwoWayBinding from './components/TwoWayBinding.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     OneWayBinding,
     OneWayBindingExercise,
     Events,
-    EventsExercise
+    EventsExercise,
+    TwoWayBinding
   }
 }
 </script>
