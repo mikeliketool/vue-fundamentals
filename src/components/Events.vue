@@ -5,12 +5,13 @@
     <p v-on:mousemove='updateCoordinates'>Coordinates: {{ x }} / {{ y }}
       <span v-on:mousemove.stop="">Dead Spot </span>
     </p>
+    <input type='text' v-on:keyup.enter.space='alertMe' />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Events',
   data() {
 		return {
       counter: 0,
@@ -25,6 +26,9 @@ export default {
     updateCoordinates(event) {
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    alertMe() {
+      alert('Alert!')
     }
   }
 }

@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'OneWayBindingExercise',
   data() {
 		return {
       name: 'Mike Fehrenbach',
