@@ -1,5 +1,6 @@
 <template>
-  <div class='exercise_1'>
+  <div class='onewaybinding_exercise'>
+    <h1 v-once>{{ title }}</h1>
     <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
     <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
     <!-- 2) Output your age, multiplied by 3 -->
@@ -22,6 +23,7 @@ export default {
   name: 'OneWayBindingExercise',
   data() {
 		return {
+      title: 'OneWayBinding Excercise',
       name: 'Mike Fehrenbach',
       age: 302,
       bronsonLink: 'https://www.santacruzbicycles.com/files/styles/scb_crop_520_333/public/frame-thumbs/bantam-profile.jpg?itok=ItEJZ77W'

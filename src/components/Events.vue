@@ -1,5 +1,6 @@
 <template>
   <div class='events'>
+    <h1 v-once>{{ title }}</h1>
     <button v-on:click='increase(2, $event)'>Click Me</button>
     <p>{{ counter }}</p>
     <p v-on:mousemove='updateCoordinates'>Coordinates: {{ x }} / {{ y }}
@@ -14,6 +15,7 @@ export default {
   name: 'Events',
   data() {
 		return {
+      title: 'Events',
       counter: 0,
       x: 0,
       y: 0
@@ -28,7 +30,7 @@ export default {
       this.y = event.clientY;
     },
     alertMe() {
-      alert('Alert!')
+      alert('Alert!');
     }
   }
 }

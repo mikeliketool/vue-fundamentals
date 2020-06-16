@@ -11,7 +11,7 @@ export default {
   name: 'OneWayBinding',
   data() {
 		return {
-      title: 'Hello World!',
+      title: 'OneWayBinding',
       link: 'http://google.com',
       finishedLink: '<a href="http://google.com">Google v-html</a>'
 		};
