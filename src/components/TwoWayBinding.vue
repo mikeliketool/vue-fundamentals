@@ -29,6 +29,14 @@ export default {
     
     }
   },
+  watch: {
+    counter() {
+      const vm = this;
+      setTimeout(() => {
+        vm.counter = 0;
+      }, 2000)
+    }
+  },
   methods: {
     result() {
       console.log('Method')
