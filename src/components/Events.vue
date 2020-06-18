@@ -1,12 +1,12 @@
 <template>
   <div class='events'>
     <h1 v-once>{{ title }}</h1>
-    <button v-on:click='increase(2, $event)'>Click Me</button>
+    <button @click='increase(2, $event)'>Click Me</button>
     <p>{{ counter }}</p>
-    <p v-on:mousemove='updateCoordinates'>Coordinates: {{ x }} / {{ y }}
-      <span v-on:mousemove.stop="">Dead Spot </span>
+    <p @mousemove='updateCoordinates'>Coordinates: {{ x }} / {{ y }}
+      <span @mousemove.stop="">Dead Spot </span>
     </p>
-    <input type='text' v-on:keyup.enter.space='alertMe' />
+    <input type='text' @keyup.enter.space='alertMe' />
   </div>
 </template>
 

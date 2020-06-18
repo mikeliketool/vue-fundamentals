@@ -1,7 +1,7 @@
 <template>
   <div class='one_way_binding'>
     <h1 v-once>{{ title }}</h1>
-    <p>{{ sayHello() }} - <a v-bind:href='link'>Google v-bind</a></p>
+    <p>{{ sayHello() }} - <a :href='link'>Google v-bind</a></p>
     <p v-html="finishedLink"></p>
   </div>
 </template>

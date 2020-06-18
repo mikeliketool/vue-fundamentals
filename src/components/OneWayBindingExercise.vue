@@ -9,7 +9,7 @@
     <p>Random number between 0 and 1: {{ getRandomNumberBetweenZeroAndOne() }}</p>
     <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
     <div>
-      <img style='width:100px;height:100px' v-bind:src='bronsonLink'>
+      <img style='width:100px;height:100px' :src='bronsonLink'>
     </div>
     <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
     <div>

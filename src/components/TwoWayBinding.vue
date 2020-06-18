@@ -3,9 +3,9 @@
     <h1 v-once>{{ title }}</h1>
     <input type='text' v-model='name'/>
     <p>{{ name }}</p>
-    <button v-on:click='counter++'>Increase</button>
-    <button v-on:click='counter--'>Decrease</button>
-    <button v-on:click='secondCounter++'>Increase Second</button>
+    <button @click='counter++'>Increase</button>
+    <button @click='counter--'>Decrease</button>
+    <button @click='secondCounter++'>Increase Second</button>
     <p>Counter: {{ counter }} | {{ secondCounter }}</p>
     <p>Result: {{ result() }} | {{ output }}</p>
   </div>
