@@ -4,9 +4,9 @@
     <div 
       class='demo'
       @click='attachRed = !attachRed'
-      :class='{red: attachRed}'
+      :class='divClasses'
     ></div>
-    <div class='demo' :class='{red: attachRed}'></div>
+    <div class='demo' :class='divClasses'></div>
     <div class='demo'></div>
   </div>
 </template>
@@ -18,6 +18,14 @@ export default {
 		return {
       title: 'DynamicCSS',
       attachRed: false
+    }
+  },
+  computed: {
+    divClasses() {
+      return {
+        red: this.attachRed,
+        blue: !this.attachRed
+      }
     }
   }
 }
