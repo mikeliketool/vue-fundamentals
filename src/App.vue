@@ -7,6 +7,7 @@
     <TwoWayBinding />
     <TwoWayBindingExercise />
     <DynamicCSS />
+    <DynamicCSSExercise />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import EventsExercise from './components/EventsExercise.vue'
 import TwoWayBinding from './components/TwoWayBinding.vue'
 import TwoWayBindingExercise from './components/TwoWayBindingExercise.vue'
 import DynamicCSS from './components/DynamicCSS.vue'
+import DynamicCSSExercise from './components/DynamicCSSExercise.vue'
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     EventsExercise,
     TwoWayBinding,
     TwoWayBindingExercise,
-    DynamicCSS
+    DynamicCSS,
+    DynamicCSSExercise
   }
 }
 </script>
