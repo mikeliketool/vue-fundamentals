@@ -8,6 +8,7 @@
     ></div>
     <div class='demo' :class='divClasses'></div>
     <div class='demo' :class='[color, {red: attachRed}]'></div>
+    <div class='demo' :style="myStyle"></div>
     <hr>
     <input type='text' v-model='color'>
   </div>
@@ -20,7 +21,8 @@ export default {
 		return {
       title: 'DynamicCSS',
       attachRed: false,
-      color: 'green'
+      color: 'green',
+      width: 100
     }
   },
   computed: {
@@ -28,6 +30,12 @@ export default {
       return {
         red: this.attachRed,
         blue: !this.attachRed
+      }
+    },
+    myStyle() {
+      return {
+        'background-color': this.color,
+        width: `${this.width}px`
       }
     }
   }
