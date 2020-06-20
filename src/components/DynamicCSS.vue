@@ -7,7 +7,9 @@
       :class='divClasses'
     ></div>
     <div class='demo' :class='divClasses'></div>
-    <div class='demo'></div>
+    <div class='demo' :class='[color, {red: attachRed}]'></div>
+    <hr>
+    <input type='text' v-model='color'>
   </div>
 </template>
 
@@ -17,7 +19,8 @@ export default {
   data() {
 		return {
       title: 'DynamicCSS',
-      attachRed: false
+      attachRed: false,
+      color: 'green'
     }
   },
   computed: {
