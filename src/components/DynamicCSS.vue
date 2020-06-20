@@ -8,9 +8,11 @@
     ></div>
     <div class='demo' :class='divClasses'></div>
     <div class='demo' :class='[color, {red: attachRed}]'></div>
-    <div class='demo' :style="myStyle"></div>
+    <div class='demo' :style='myStyle'></div>
+    <div class='demo' :style='[myStyle, {height: `${width}px`}]'></div>
     <hr>
     <input type='text' v-model='color'>
+    <input type='text' v-model='width'>
   </div>
 </template>
 
