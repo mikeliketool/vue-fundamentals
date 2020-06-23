@@ -21,7 +21,7 @@ export default {
   name: 'TwoWayBindingExercise',
   data() {
 		return {
-      title: 'TwoWayBinding',
+      title: 'TwoWayBindingExercise',
       value: 0
     }
   },

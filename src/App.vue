@@ -8,6 +8,7 @@
     <TwoWayBindingExercise />
     <DynamicCSS />
     <DynamicCSSExercise />
+    <ConditionalRendering />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import TwoWayBinding from './components/TwoWayBinding.vue'
 import TwoWayBindingExercise from './components/TwoWayBindingExercise.vue'
 import DynamicCSS from './components/DynamicCSS.vue'
 import DynamicCSSExercise from './components/DynamicCSSExercise.vue'
+import ConditionalRendering from './components/ConditionalRendering.vue'
 
 export default {
   name: 'App',
@@ -31,7 +33,8 @@ export default {
     TwoWayBinding,
     TwoWayBindingExercise,
     DynamicCSS,
-    DynamicCSSExercise
+    DynamicCSSExercise,
+    ConditionalRendering
   }
 }
 </script>
