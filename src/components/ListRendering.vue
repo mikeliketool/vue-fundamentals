@@ -2,7 +2,7 @@
   <div class='list_rendering'>
     <h1 v-once>{{ title }}</h1>
     <ul>
-      <li v-for='ingredient in ingredients' :key='ingredient'>{{ ingredient }}</li>
+      <li v-for='(ingredient, i) in ingredients' :key='ingredient'>{{ ingredient }} ({{ i }})</li>
     </ul>
   </div>
 </template>
