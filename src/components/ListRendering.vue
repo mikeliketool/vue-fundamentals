@@ -10,12 +10,12 @@
           <div v-for='(value, key, index) in person' :key='key'>{{ key }}: {{ value }} ({{ index }})</div>
         </li>
       </ul>
+    <span v-for='n in 10' :key='n'>{{ n }}</span>
     <hr>
     <template v-for='(ingredient, i) in ingredients'>
       <h1 :key='ingredient'>{{ ingredient }}</h1>
       <p :key='i'>{{ i }}</p>
     </template>
-    
   </div>
 </template>
 
