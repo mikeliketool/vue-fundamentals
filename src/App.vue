@@ -10,6 +10,7 @@
     <DynamicCSSExercise />
     <ConditionalRendering />
     <ListRendering />
+    <ConditionalRenderingAndListRenderingExercise />
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import DynamicCSS from './components/DynamicCSS.vue'
 import DynamicCSSExercise from './components/DynamicCSSExercise.vue'
 import ConditionalRendering from './components/ConditionalRendering.vue'
 import ListRendering from './components/ListRendering.vue'
+import ConditionalRenderingAndListRenderingExercise from './components/ConditionalRenderingAndListRenderingExercise.vue'
 
 export default {
   name: 'App',
@@ -37,7 +39,8 @@ export default {
     DynamicCSS,
     DynamicCSSExercise,
     ConditionalRendering,
-    ListRendering
+    ListRendering,
+    ConditionalRenderingAndListRenderingExercise
   }
 }
 </script>

@@ -1,11 +1,22 @@
 <template>
-  <div class='two_way_binding'>
-    <h1 v-once>{{ title }}</h1>
-    <input type='text' v-model='name'/>
+  <div class="two_way_binding">
+    <h1 v-once>
+      {{ title }}
+    </h1>
+    <input
+      v-model="name"
+      type="text"
+    >
     <p>{{ name }}</p>
-    <button @click='counter++'>Increase</button>
-    <button @click='counter--'>Decrease</button>
-    <button @click='secondCounter++'>Increase Second</button>
+    <button @click="counter++">
+      Increase
+    </button>
+    <button @click="counter--">
+      Decrease
+    </button>
+    <button @click="secondCounter++">
+      Increase Second
+    </button>
     <p>Counter: {{ counter }} | {{ secondCounter }}</p>
     <p>Result: {{ result() }} | {{ output }}</p>
   </div>

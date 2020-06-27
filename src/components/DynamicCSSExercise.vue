@@ -1,34 +1,57 @@
 <template>
-  <div class='dynamic_css_exercise'>
-    <h1 v-once>{{ title }}</h1>
+  <div class="dynamic_css_exercise">
+    <h1 v-once>
+      {{ title }}
+    </h1>
     <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
     <div>
-      <button @click="toggleEffect">Toggle Effect</button>
-      <div id="effect" :class='divClasses'></div>
+      <button @click="toggleEffect">
+        Toggle Effect
+      </button>
+      <div
+        id="effect"
+        :class="divClasses"
+      />
     </div>
     <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
-    <div :class="['text-style', 'div-size']">I got no class :(</div>
+    <div :class="['text-style', 'div-size']">
+      I got no class :(
+    </div>
     <!-- 3) Let the user enter a class (create some example classes) and attach it -->
     <div>
-      <input type="text" v-model='userStyle'>
-      <div :class="[userStyle, 'div-size']"></div>
+      <input
+        v-model="userStyle"
+        type="text"
+      >
+      <div :class="[userStyle, 'div-size']" />
     </div>
     <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
     <div>
-      <input type="text" v-model='userStyle'>
-      <input type="text" v-model='showClassInput'>
-      <div :class="[userStyle, {shrink: showClass}, 'div-size']"></div>
+      <input
+        v-model="userStyle"
+        type="text"
+      >
+      <input
+        v-model="showClassInput"
+        type="text"
+      >
+      <div :class="[userStyle, {shrink: showClass}, 'div-size']" />
     </div>
     <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
     <div>
-      <input type="text" v-model='userStyle'>
-      <div :style='myStyle'></div>
+      <input
+        v-model="userStyle"
+        type="text"
+      >
+      <div :style="myStyle" />
     </div>
     <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
     <div>
-      <button @click='toggleProgress'>Start Progress</button>
-      <div id='progress'>
-        <div :style='progressStyle'></div>
+      <button @click="toggleProgress">
+        Start Progress
+      </button>
+      <div id="progress">
+        <div :style="progressStyle" />
       </div>
     </div>
   </div>
@@ -76,14 +99,6 @@ export default {
       }
     }
   },
-  methods: {
-    toggleEffect() {
-      this.startEffect = !this.startEffect;
-    },
-    toggleProgress() {
-      this.startProgress = !this.startProgress;
-    }
-  },
   watch: {
     startEffect() {
       if (this.startEffect) {
@@ -107,6 +122,14 @@ export default {
         clearInterval(this.progressInterval);
         this.progressWidth = 0;
       }
+    }
+  },
+  methods: {
+    toggleEffect() {
+      this.startEffect = !this.startEffect;
+    },
+    toggleProgress() {
+      this.startProgress = !this.startProgress;
     }
   }
 }

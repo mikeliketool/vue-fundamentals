@@ -1,18 +1,38 @@
 <template>
-  <div class='dynamic_css'>
-    <h1 v-once>{{ title }}</h1>
+  <div class="dynamic_css">
+    <h1 v-once>
+      {{ title }}
+    </h1>
     <div 
-      class='demo'
-      @click='attachRed = !attachRed'
-      :class='divClasses'
-    ></div>
-    <div class='demo' :class='divClasses'></div>
-    <div class='demo' :class='[color, {red: attachRed}]'></div>
-    <div class='demo' :style='myStyle'></div>
-    <div class='demo' :style='[myStyle, {height: `${width}px`}]'></div>
+      class="demo"
+      :class="divClasses"
+      @click="attachRed = !attachRed"
+    />
+    <div
+      class="demo"
+      :class="divClasses"
+    />
+    <div
+      class="demo"
+      :class="[color, {red: attachRed}]"
+    />
+    <div
+      class="demo"
+      :style="myStyle"
+    />
+    <div
+      class="demo"
+      :style="[myStyle, {height: `${width}px`}]"
+    />
     <hr>
-    <input type='text' v-model='color'>
-    <input type='text' v-model='width'>
+    <input
+      v-model="color"
+      type="text"
+    >
+    <input
+      v-model="width"
+      type="text"
+    >
   </div>
 </template>
 

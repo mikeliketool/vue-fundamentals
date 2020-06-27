@@ -1,6 +1,8 @@
 <template>
-  <div class='onewaybinding_exercise'>
-    <h1 v-once>{{ title }}</h1>
+  <div class="onewaybinding_exercise">
+    <h1 v-once>
+      {{ title }}
+    </h1>
     <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
     <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
     <!-- 2) Output your age, multiplied by 3 -->
@@ -9,11 +11,17 @@
     <p>Random number between 0 and 1: {{ getRandomNumberBetweenZeroAndOne() }}</p>
     <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
     <div>
-      <img style='width:100px;height:100px' :src='bronsonLink'>
+      <img
+        style="width:100px;height:100px"
+        :src="bronsonLink"
+      >
     </div>
     <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
     <div>
-      <input type='text' v-model='name'>
+      <input
+        v-model="name"
+        type="text"
+      >
     </div>
   </div>
 </template>
